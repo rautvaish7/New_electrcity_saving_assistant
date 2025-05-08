@@ -13,7 +13,8 @@ st.set_page_config(page_title="Electricity Saving Assistant", page_icon="⚡", l
 # Load model and encoders
 # model = joblib.load("model.pkl")
 model_path = os.path.join(os.path.dirname(__file__), 'model.pkl')
-mlb = joblib.load("appliance_encoder.pkl")
+# mlb = joblib.load("appliance_encoder.pkl")
+mlb = joblib.load(os.path.join(os.path.dirname(__file__), "appliance_encoder.pkl"))
 
 # Load appliance tips
 tips_db = json.load(open("tips.json"))
